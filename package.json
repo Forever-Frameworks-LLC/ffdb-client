@@ -1,0 +1,82 @@
+{
+  "name": "ffdb-client",
+  "version": "0.1.0",
+  "author": "dev@forever-frameworks.com",
+  "description": "Framework-agnostic client for FFDB — works in Node.js, browsers, React Native, and Expo",
+  "type": "module",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Forever-Frameworks-LLC/ffdb-client.git"
+  },
+  "keywords": [
+    "database",
+    "client",
+    "kysely",
+    "sqlite",
+    "universal",
+    "react",
+    "react-native",
+    "expo"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    },
+    "./node": {
+      "types": "./dist/src/node/index.d.ts",
+      "import": "./dist/src/node/index.js"
+    },
+    "./react": {
+      "types": "./dist/src/react/index.d.ts",
+      "import": "./dist/src/react/index.js"
+    }
+  },
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_LICENSES.md"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "check": "tsc --noEmit && biome check --write",
+    "npm:patch": "npm version patch && npm publish --access public",
+    "npm:minor": "npm version minor && npm publish --access public",
+    "npm:major": "npm version major && npm publish --access public",
+    "npm:publish": "npm publish --access public",
+    "test": "vitest run tests/*.test.ts",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.11",
+    "@types/node": "25.6.0",
+    "@types/react": "19.2.14",
+    "tsx": "4.21.0",
+    "typescript": "6.0.2",
+    "vitest": "4.1.4"
+  },
+  "dependencies": {
+    "@better-auth/api-key": "^1.6.9",
+    "@better-auth/passkey": "^1.6.9",
+    "@better-auth/stripe": "1.6.9",
+    "@better-fetch/fetch": "1.1.21",
+    "@better-fetch/logger": "1.1.21",
+    "better-auth": "1.6.9",
+    "kysely": "0.28.16"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "optionalDependencies": {
+    "dotenv": "17.4.2"
+  }
+}
