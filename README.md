@@ -25,7 +25,7 @@ npm install ffdb-client
 
 - Follow the prompts and select a quick start template.
 ```bash
-npx ffdb init
+npx ffdb-cli init
 ```
 
 ### Any JavaScript environment

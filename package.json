@@ -1,14 +1,7 @@
 {
   "name": "ffdb-client",
   "version": "0.1.0",
-  "author": "dev@forever-frameworks.com",
   "description": "Framework-agnostic client for FFDB — works in Node.js, browsers, React Native, and Expo",
-  "type": "module",
-  "license": "UNLICENSED",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Forever-Frameworks-LLC/ffdb-client.git"
-  },
   "keywords": [
     "database",
     "client",
@@ -19,6 +12,17 @@
     "react-native",
     "expo"
   ],
+  "homepage": "https://github.com/Forever-Frameworks-LLC/ffdb-client#readme",
+  "bugs": {
+    "url": "https://github.com/Forever-Frameworks-LLC/ffdb-client/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Forever-Frameworks-LLC/ffdb-client.git"
+  },
+  "license": "UNLICENSED",
+  "author": "dev@forever-frameworks.com",
+  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/src/index.d.ts",
@@ -35,6 +39,9 @@
   },
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
+  "directories": {
+    "test": "tests"
+  },
   "files": [
     "dist",
     "README.md",
@@ -51,22 +58,22 @@
     "test": "vitest run tests/*.test.ts",
     "prepublishOnly": "npm test && npm run build"
   },
-  "devDependencies": {
-    "@biomejs/biome": "2.4.11",
-    "@types/node": "25.6.0",
-    "@types/react": "19.2.14",
-    "tsx": "4.21.0",
-    "typescript": "6.0.2",
-    "vitest": "4.1.4"
-  },
   "dependencies": {
-    "@better-auth/api-key": "^1.6.9",
-    "@better-auth/passkey": "^1.6.9",
-    "@better-auth/stripe": "1.6.9",
+    "@better-auth/api-key": "^1.6.10",
+    "@better-auth/passkey": "^1.6.10",
+    "@better-auth/stripe": "1.6.10",
     "@better-fetch/fetch": "1.1.21",
     "@better-fetch/logger": "1.1.21",
-    "better-auth": "1.6.9",
-    "kysely": "0.28.16"
+    "better-auth": "1.6.10",
+    "kysely": "0.29.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.15",
+    "@types/node": "25.7.0",
+    "@types/react": "19.2.14",
+    "tsx": "4.21.0",
+    "typescript": "6.0.3",
+    "vitest": "4.1.6"
   },
   "peerDependencies": {
     "react": ">=18"
