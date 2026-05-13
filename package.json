@@ -51,9 +51,9 @@
   "scripts": {
     "build": "rm -rf dist && tsc",
     "check": "tsc --noEmit && biome check --write",
-    "npm:patch": "npm version patch && npm publish --access public",
-    "npm:minor": "npm version minor && npm publish --access public",
-    "npm:major": "npm version major && npm publish --access public",
+    "npm:patch": "npm version patch && npm publish --access public && git push --follow-tags",
+    "npm:minor": "npm version minor && npm publish --access public && git push --follow-tags",
+    "npm:major": "npm version major && npm publish --access public && git push --follow-tags",
     "npm:publish": "npm publish --access public",
     "test": "vitest run tests/*.test.ts",
     "prepublishOnly": "npm test && npm run build"

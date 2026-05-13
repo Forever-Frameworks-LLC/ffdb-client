@@ -22,3 +22,14 @@ export {
 	useQuery,
 	useRawQuery,
 } from "./use-query.ts";
+export {
+	type UseFileListOptions,
+	type UseFileListResult,
+	type UseFileUrlOptions,
+	type UseFileUrlResult,
+	type UseUploadResult,
+	useFileList,
+	useFileUrl,
+	useFiles,
+	useUpload,
+} from "./use-files.ts";

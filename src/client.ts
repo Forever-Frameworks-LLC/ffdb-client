@@ -33,6 +33,7 @@ import { OfflineDriver } from "./offline/driver.ts";
 import { SyncManager } from "./offline/sync.ts";
 import type { OfflineConfig, SyncStatus } from "./offline/types.ts";
 import { memoryStorage, type StorageAdapter } from "./storage.ts";
+import { createFilesNamespace, type FilesNamespace } from "./files.ts";
 import type { Database as BasicDatabase } from "./types.ts";
 
 const REFRESH_BUFFER_MS = 5 * 60 * 1000;
@@ -218,6 +219,7 @@ export type FFDBClient<ExtraDatabase = unknown> = {
 	sync: SyncHandle | null;
 	getAccess: (opts?: { force?: boolean }) => Promise<AccessInfo>;
 	subscribe: (listener: () => void) => () => void;
+	files: FilesNamespace;
 };
 
 async function isApiHealthy(
@@ -1656,6 +1658,8 @@ export async function createClient<ExtraDatabase>(
 		return syncManager.subscribeData(listener);
 	}
 
+	const files = createFilesNamespace(request);
+
 	return {
 		db,
 		sql: sqlHelper,
@@ -1665,5 +1669,6 @@ export async function createClient<ExtraDatabase>(
 		sync,
 		getAccess,
 		subscribe,
+		files,
 	};
 }

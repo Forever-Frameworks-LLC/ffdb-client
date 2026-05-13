@@ -12,6 +12,15 @@ export type {
 } from "./client.ts";
 export { createClient } from "./client.ts";
 export type { FFDB_Config } from "./config.ts";
+export type {
+	FileRecord,
+	FileUrl,
+	FileListResult,
+	FilesNamespace,
+	UploadOptions,
+} from "./files.ts";
+export { FileStorageError } from "./files.ts";
+export type { CompressOptions } from "./image-compress.ts";
 export { defaultConfig } from "./config.ts";
 export type { FetchClient } from "./fetch.ts";
 export { createFetchClient } from "./fetch.ts";
