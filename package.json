@@ -59,19 +59,19 @@
     "prepublishOnly": "npm test && npm run build"
   },
   "dependencies": {
-    "@better-auth/api-key": "^1.6.10",
-    "@better-auth/passkey": "^1.6.10",
-    "@better-auth/stripe": "1.6.10",
+    "@better-auth/api-key": "1.6.11",
+    "@better-auth/passkey": "1.6.11",
+    "@better-auth/stripe": "1.6.11",
     "@better-fetch/fetch": "1.1.21",
     "@better-fetch/logger": "1.1.21",
-    "better-auth": "1.6.10",
+    "better-auth": "1.6.11",
     "kysely": "0.29.0"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.15",
-    "@types/node": "25.7.0",
+    "@types/node": "25.8.0",
     "@types/react": "19.2.14",
-    "tsx": "4.21.0",
+    "tsx": "4.22.0",
     "typescript": "6.0.3",
     "vitest": "4.1.6"
   },
