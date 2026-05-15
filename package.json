@@ -1,6 +1,6 @@
 {
   "name": "ffdb-client",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Framework-agnostic client for FFDB — works in Node.js, browsers, React Native, and Expo",
   "keywords": [
     "database",
